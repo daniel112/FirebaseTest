@@ -8,6 +8,27 @@
 
 import UIKit
 
+// Delegates
+
+// Utilities
+import SWRevealViewController
+import Firebase
+import FirebaseUI
+import FirebaseAuth
+// Globals
+
+// Classes
+
+// Classes - Models
+
+// Classes - Views
+
+// Classes - View Controllers
+
+// Class Extensions
+
+// Definitions
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,10 +36,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        FirebaseApp.configure()
+        // Initialize the window
+        window = UIWindow.init(frame: UIScreen.main.bounds)
+        
+        let navigationController:UINavigationController = UINavigationController.init(rootViewController: LoginViewController())
+        
+
+//        let swrevealView = SWRevealViewController.init(rearViewController: SideMenuViewController(), frontViewController: navigationController)
+        window!.rootViewController = navigationController
+        
+        window!.makeKeyAndVisible()
+        
         return true
     }
 
+    func application(_ app: UIApplication, open url: URL,
+                     options: [UIApplicationOpenURLOptionsKey : Any]) -> Bool {
+        let sourceApplication = options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String?
+        if FUIAuth.defaultAuthUI()?.handleOpen(url, sourceApplication: sourceApplication) ?? false {
+            return true
+        }
+        // other URL handling goes here.
+        return false
+    }
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
