@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +20,7 @@ class HomeViewController: UIViewController {
                 let uid = user.uid
                 let email = user.email
                 let photoURL = user.photoURL
-                print("\n\n%@ is Logged in", user.displayName!)
+                print("\n\n is Logged in", user.displayName!)
             }
             
         } else {

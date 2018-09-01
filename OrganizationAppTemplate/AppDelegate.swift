@@ -15,19 +15,7 @@ import SWRevealViewController
 import Firebase
 import FirebaseUI
 import FirebaseAuth
-// Globals
 
-// Classes
-
-// Classes - Models
-
-// Classes - Views
-
-// Classes - View Controllers
-
-// Class Extensions
-
-// Definitions
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -44,8 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController:UINavigationController = UINavigationController.init(rootViewController: HomeViewController())
         
 
-//        let swrevealView = SWRevealViewController.init(rearViewController: SideMenuViewController(), frontViewController: navigationController)
-        window!.rootViewController = navigationController
+        let swrevealView = SWRevealViewController.init(rearViewController: SideMenuViewController(), frontViewController: navigationController)
+        window!.rootViewController = swrevealView
         
         window!.makeKeyAndVisible()
         

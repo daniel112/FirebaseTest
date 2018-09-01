@@ -48,7 +48,7 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
 
 
     // MARK: Delegate
-    func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
+    private func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
         if (error != nil) {
             print("\n\nfailed login %@", error.debugDescription)
             // make custom popup for errors
