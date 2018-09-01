@@ -28,6 +28,7 @@
 		6545EEFF2139000B007CB6B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6545EF0B213904E2007CB6B8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		6545EF0D21390585007CB6B8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		65A32E5C213A256F000C7CF2 /* OrganizationAppTemplate.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OrganizationAppTemplate.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 		6545EEF22139000A007CB6B8 /* OrganizationAppTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				65A32E5C213A256F000C7CF2 /* OrganizationAppTemplate.entitlements */,
 				6545EEF32139000A007CB6B8 /* AppDelegate.swift */,
 				6545EF062139005B007CB6B8 /* ViewControllers */,
 				6545EF0521390021007CB6B8 /* Resources */,
@@ -142,6 +144,11 @@
 				TargetAttributes = {
 					6545EEEF2139000A007CB6B8 = {
 						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -431,6 +438,7 @@
 			baseConfigurationReference = 0CE81C8072FBA566D9ED9480 /* Pods-OrganizationAppTemplate.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OrganizationAppTemplate/OrganizationAppTemplate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6W2A826YQJ;
 				INFOPLIST_FILE = "$(SRCROOT)/OrganizationAppTemplate/Resources/Info.plist";
@@ -451,6 +459,7 @@
 			baseConfigurationReference = 05B7DFACC5E6B91AD6A3BAD8 /* Pods-OrganizationAppTemplate.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OrganizationAppTemplate/OrganizationAppTemplate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6W2A826YQJ;
 				INFOPLIST_FILE = "$(SRCROOT)/OrganizationAppTemplate/Resources/Info.plist";

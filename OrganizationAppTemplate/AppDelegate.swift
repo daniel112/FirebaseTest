@@ -41,7 +41,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Initialize the window
         window = UIWindow.init(frame: UIScreen.main.bounds)
         
-        let navigationController:UINavigationController = UINavigationController.init(rootViewController: LoginViewController())
+        let navigationController:UINavigationController = UINavigationController.init(rootViewController: HomeViewController())
         
 
 //        let swrevealView = SWRevealViewController.init(rearViewController: SideMenuViewController(), frontViewController: navigationController)

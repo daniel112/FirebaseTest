@@ -37,11 +37,11 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
         authUI!.delegate = self
         let providers: [FUIAuthProvider] = [
             FUIGoogleAuth(),
-            FUIFacebookAuth(),
-            FUIPhoneAuth(authUI:FUIAuth.defaultAuthUI()!),
+            FUIFacebookAuth()
             ]
         authUI!.providers = providers
         
+        // default view
         let authViewController = authUI!.authViewController()
         self.present(authViewController, animated: false, completion: nil)
     }
@@ -49,6 +49,14 @@ class LoginViewController: UIViewController, FUIAuthDelegate {
 
     // MARK: Delegate
     func authUI(_ authUI: FUIAuth, didSignInWith user: User?, error: Error?) {
-        
+        if (error != nil) {
+            print("\n\nfailed login %@", error.debugDescription)
+            // make custom popup for errors
+        } else {
+            print("successful login")
+            
+        }
     }
+    
+    
 }
