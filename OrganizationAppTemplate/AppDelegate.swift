@@ -28,12 +28,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         // Initialize the window
         window = UIWindow.init(frame: UIScreen.main.bounds)
-        
-        let navigationController:UINavigationController = UINavigationController.init(rootViewController: HomeViewController())
+        UINavigationBar.appearance().barTintColor = AppTheme().mainColor()
+        UIApplication.shared.statusBarStyle = .lightContent
+        var rootVC:UIViewController?
+        if Auth.auth().currentUser != nil {
+            let navigationController:UINavigationController = UINavigationController.init(rootViewController: HomeViewController())
+            rootVC = SWRevealViewController.init(rearViewController: SideMenuViewController(), frontViewController: navigationController)
+            
+        } else {
+            rootVC = UINavigationController.init(rootViewController: LoginViewController())
+        }
         
 
-        let swrevealView = SWRevealViewController.init(rearViewController: SideMenuViewController(), frontViewController: navigationController)
-        window!.rootViewController = swrevealView
+        
+        window!.rootViewController = rootVC!
         
         window!.makeKeyAndVisible()
         

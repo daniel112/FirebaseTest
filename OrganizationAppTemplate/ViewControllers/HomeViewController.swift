@@ -15,17 +15,7 @@ class HomeViewController: BaseViewController {
         super.viewDidLoad()
         self.setup()
         
-        if Auth.auth().currentUser != nil {
-            if let user = Auth.auth().currentUser {
-                let uid = user.uid
-                let email = user.email
-                let photoURL = user.photoURL
-                print("\n\n is Logged in", user.displayName!)
-            }
-            
-        } else {
-            self.present(LoginViewController(), animated: false, completion: nil)
-        }
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,9 +23,10 @@ class HomeViewController: BaseViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    // MARK: Private API
+    // MARK: - Private API
     private func setup() {
         self.view.backgroundColor = UIColor.white
+
     }
     
     

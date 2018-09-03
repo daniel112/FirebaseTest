@@ -19,7 +19,7 @@ class SideMenuViewController: UIViewController, ListAdapterDataSource, SideMenuO
     }()
     let collectionView: UICollectionView = {
         let view = UICollectionView(frame: CGRect.zero, collectionViewLayout: UICollectionViewFlowLayout())
-        view.backgroundColor = UIColor.lightGray
+        view.backgroundColor = AppTheme().mainColor()
         view.alwaysBounceVertical = true
         return view
     }()
@@ -59,7 +59,8 @@ class SideMenuViewController: UIViewController, ListAdapterDataSource, SideMenuO
         self.sideMenuObjects.append(SideMenuHeader.init(withName: "App Title", image: nil, version: "1.0.0")!)
         //options
         self.sideMenuObjects.append(SideMenuItem.init(withName: "Home", image: nil)!)
-        self.sideMenuObjects.append(SideMenuItem.init(withName: "Login", image:nil)!)
+        self.sideMenuObjects.append(SideMenuItem.init(withName: "Dad Jokes", image:nil)!)
+        self.sideMenuObjects.append(SideMenuItem.init(withName: "Logout", image:nil)!)
    
     }
     
@@ -87,6 +88,17 @@ class SideMenuViewController: UIViewController, ListAdapterDataSource, SideMenuO
     
     // SideMenuOptionSectionControllerDelegate
     func didSelectSideMenuOptionItem(item: SideMenuItem) {
-        
+        if (item.name == "Dad Jokes") {
+            self.revealViewController().pushFrontViewController(UINavigationController.init(rootViewController: DadJokeViewController()), animated: true)
+        } else if (item.name == "Home") {
+            self.revealViewController().pushFrontViewController(UINavigationController.init(rootViewController: HomeViewController()), animated: true)
+        } else if (item.name == "Logout") {
+            let a = App.shared.currentUser
+            App.shared.currentUser.logout()
+            // TODO: modify VC for popup
+            self.revealViewController().pushFrontViewController(UINavigationController.init(rootViewController: LoginViewController()), animated: true)
+
+        }
+        self.revealViewController().setFrontViewPosition(FrontViewPosition.left, animated: true)
     }
 }

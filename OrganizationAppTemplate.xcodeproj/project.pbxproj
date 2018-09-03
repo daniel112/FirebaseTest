@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1352F99A213B372800B35C9E /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352F999213B372800B35C9E /* AlertViewController.swift */; };
+		1352F99D213B3DE900B35C9E /* DimPopupPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352F99C213B3DE900B35C9E /* DimPopupPresentationController.swift */; };
+		1352F9A0213B999600B35C9E /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352F99F213B999600B35C9E /* AppTheme.swift */; };
+		1352F9A4213B9A9200B35C9E /* UIColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352F9A3213B9A9200B35C9E /* UIColorExtensions.swift */; };
+		1352F9A6213BAF3900B35C9E /* DadJokeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352F9A5213BAF3900B35C9E /* DadJokeViewController.swift */; };
+		1352F9AB213BB49300B35C9E /* DadJoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352F9AA213BB49300B35C9E /* DadJoke.swift */; };
+		1352F9B1213C6CE000B35C9E /* DadJokeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352F9B0213C6CE000B35C9E /* DadJokeAPI.swift */; };
+		1352F9B3213C710000B35C9E /* AFBaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352F9B2213C710000B35C9E /* AFBaseNetworking.swift */; };
+		1352F9B5213CBBE100B35C9E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352F9B4213CBBE100B35C9E /* App.swift */; };
+		1352F9B8213CC43000B35C9E /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352F9B7213CC43000B35C9E /* UserDefaultKeys.swift */; };
 		6545EEF42139000A007CB6B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6545EEF32139000A007CB6B8 /* AppDelegate.swift */; };
 		6545EEF62139000A007CB6B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6545EEF52139000A007CB6B8 /* HomeViewController.swift */; };
 		6545EEFB2139000B007CB6B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6545EEFA2139000B007CB6B8 /* Assets.xcassets */; };
@@ -28,6 +38,16 @@
 /* Begin PBXFileReference section */
 		05B7DFACC5E6B91AD6A3BAD8 /* Pods-OrganizationAppTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrganizationAppTemplate.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrganizationAppTemplate/Pods-OrganizationAppTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		0CE81C8072FBA566D9ED9480 /* Pods-OrganizationAppTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrganizationAppTemplate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrganizationAppTemplate/Pods-OrganizationAppTemplate.debug.xcconfig"; sourceTree = "<group>"; };
+		1352F999213B372800B35C9E /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
+		1352F99C213B3DE900B35C9E /* DimPopupPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimPopupPresentationController.swift; sourceTree = "<group>"; };
+		1352F99F213B999600B35C9E /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		1352F9A3213B9A9200B35C9E /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
+		1352F9A5213BAF3900B35C9E /* DadJokeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadJokeViewController.swift; sourceTree = "<group>"; };
+		1352F9AA213BB49300B35C9E /* DadJoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadJoke.swift; sourceTree = "<group>"; };
+		1352F9B0213C6CE000B35C9E /* DadJokeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DadJokeAPI.swift; sourceTree = "<group>"; };
+		1352F9B2213C710000B35C9E /* AFBaseNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFBaseNetworking.swift; sourceTree = "<group>"; };
+		1352F9B4213CBBE100B35C9E /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		1352F9B7213CC43000B35C9E /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
 		1718AADBCE0D0DCA466CDF8D /* Pods_OrganizationAppTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrganizationAppTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6545EEF02139000A007CB6B8 /* OrganizationAppTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrganizationAppTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6545EEF32139000A007CB6B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +81,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1352F998213B370700B35C9E /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				1352F999213B372800B35C9E /* AlertViewController.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		1352F99B213B3DD700B35C9E /* Popup */ = {
+			isa = PBXGroup;
+			children = (
+				1352F99C213B3DE900B35C9E /* DimPopupPresentationController.swift */,
+			);
+			path = Popup;
+			sourceTree = "<group>";
+		};
+		1352F9A1213B99BB00B35C9E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				1352F9B6213CC40500B35C9E /* Keys */,
+				1352F9B4213CBBE100B35C9E /* App.swift */,
+				65A32E5F213A5613000C7CF2 /* User.swift */,
+				1352F99F213B999600B35C9E /* AppTheme.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		1352F9A2213B9A6A00B35C9E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1352F9A3213B9A9200B35C9E /* UIColorExtensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		1352F9A7213BB12500B35C9E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				1352F9B2213C710000B35C9E /* AFBaseNetworking.swift */,
+				1352F9A9213BB47C00B35C9E /* API */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		1352F9A8213BB47400B35C9E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1352F9AA213BB49300B35C9E /* DadJoke.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		1352F9A9213BB47C00B35C9E /* API */ = {
+			isa = PBXGroup;
+			children = (
+				1352F9B0213C6CE000B35C9E /* DadJokeAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		1352F9B6213CC40500B35C9E /* Keys */ = {
+			isa = PBXGroup;
+			children = (
+				1352F9B7213CC43000B35C9E /* UserDefaultKeys.swift */,
+			);
+			path = Keys;
+			sourceTree = "<group>";
+		};
 		6545EEE72139000A007CB6B8 = {
 			isa = PBXGroup;
 			children = (
@@ -84,6 +172,7 @@
 			children = (
 				65A32E5C213A256F000C7CF2 /* OrganizationAppTemplate.entitlements */,
 				6545EEF32139000A007CB6B8 /* AppDelegate.swift */,
+				1352F9A7213BB12500B35C9E /* Network */,
 				65A32E64213A59C1000C7CF2 /* Models */,
 				65A32E65213A59CD000C7CF2 /* Views */,
 				6545EF062139005B007CB6B8 /* ViewControllers */,
@@ -107,10 +196,12 @@
 		6545EF062139005B007CB6B8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				1352F998213B370700B35C9E /* Alert */,
 				65A32E72213A61E6000C7CF2 /* BaseViewController.swift */,
 				6545EEF52139000A007CB6B8 /* HomeViewController.swift */,
 				6545EF0B213904E2007CB6B8 /* LoginViewController.swift */,
 				65A32E61213A5796000C7CF2 /* SideMenuViewController.swift */,
+				1352F9A5213BAF3900B35C9E /* DadJokeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -118,23 +209,17 @@
 		65A32E5D213A55F1000C7CF2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1352F9A2213B9A6A00B35C9E /* Extensions */,
+				1352F9A1213B99BB00B35C9E /* Common */,
 				65A32E63213A57F4000C7CF2 /* Controllers */,
-				65A32E5E213A5602000C7CF2 /* Global */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		65A32E5E213A5602000C7CF2 /* Global */ = {
-			isa = PBXGroup;
-			children = (
-				65A32E5F213A5613000C7CF2 /* User.swift */,
-			);
-			path = Global;
 			sourceTree = "<group>";
 		};
 		65A32E63213A57F4000C7CF2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				1352F99B213B3DD700B35C9E /* Popup */,
 				65A32E6F213A5E22000C7CF2 /* SideMenu */,
 			);
 			path = Controllers;
@@ -143,6 +228,7 @@
 		65A32E64213A59C1000C7CF2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1352F9A8213BB47400B35C9E /* API */,
 				65A32E66213A5A7B000C7CF2 /* SideMenu */,
 			);
 			path = Models;
@@ -338,6 +424,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-OrganizationAppTemplate/Pods-OrganizationAppTemplate-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
@@ -348,6 +436,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SWRevealViewController/SWRevealViewController.framework",
@@ -363,6 +452,8 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
@@ -373,6 +464,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SWRevealViewController.framework",
@@ -406,10 +498,20 @@
 				65A32E6A213A5B91000C7CF2 /* SideMenuItem.swift in Sources */,
 				65A32E6C213A5DA8000C7CF2 /* SideMenuHeaderSectionController.swift in Sources */,
 				65A32E73213A61E6000C7CF2 /* BaseViewController.swift in Sources */,
+				1352F9AB213BB49300B35C9E /* DadJoke.swift in Sources */,
 				65A32E62213A5796000C7CF2 /* SideMenuViewController.swift in Sources */,
+				1352F9A0213B999600B35C9E /* AppTheme.swift in Sources */,
 				65A32E68213A5A91000C7CF2 /* SideMenuHeader.swift in Sources */,
+				1352F9B5213CBBE100B35C9E /* App.swift in Sources */,
 				65A32E71213A5E3F000C7CF2 /* SideMenuHeaderCollectionViewCell.swift in Sources */,
+				1352F99A213B372800B35C9E /* AlertViewController.swift in Sources */,
 				6545EEF42139000A007CB6B8 /* AppDelegate.swift in Sources */,
+				1352F9B8213CC43000B35C9E /* UserDefaultKeys.swift in Sources */,
+				1352F9B3213C710000B35C9E /* AFBaseNetworking.swift in Sources */,
+				1352F99D213B3DE900B35C9E /* DimPopupPresentationController.swift in Sources */,
+				1352F9A4213B9A9200B35C9E /* UIColorExtensions.swift in Sources */,
+				1352F9A6213BAF3900B35C9E /* DadJokeViewController.swift in Sources */,
+				1352F9B1213C6CE000B35C9E /* DadJokeAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,7 +650,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OrganizationAppTemplate/OrganizationAppTemplate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6W2A826YQJ;
+				DEVELOPMENT_TEAM = EMG5DC5D6W;
 				INFOPLIST_FILE = "$(SRCROOT)/OrganizationAppTemplate/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -569,7 +671,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OrganizationAppTemplate/OrganizationAppTemplate.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6W2A826YQJ;
+				DEVELOPMENT_TEAM = EMG5DC5D6W;
 				INFOPLIST_FILE = "$(SRCROOT)/OrganizationAppTemplate/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (

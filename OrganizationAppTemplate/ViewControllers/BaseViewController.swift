@@ -25,7 +25,8 @@ class BaseViewController: UIViewController {
     // MARK: Private API
     private func setup() {
         //set menu image
-        let menuImage = UIImage.init(named: "nav_menu")
+        let menuImage = UIImage(named: "nav_menu")!.withRenderingMode(.alwaysTemplate)
+
         //set bg color
         view.backgroundColor = UIColor.white
 
@@ -39,6 +40,7 @@ class BaseViewController: UIViewController {
             revealController.panGestureRecognizer()
             revealController.tapGestureRecognizer()
             let sideMenuButton = UIBarButtonItem(image: menuImage, style: UIBarButtonItemStyle.plain, target: self, action: #selector(buttonMenu_touchUpInside(sender:)))
+            sideMenuButton.tintColor = UIColor.white
             self.navigationItem.leftBarButtonItem = sideMenuButton
         }
         self.navigationItem.backBarButtonItem = UIBarButtonItem()
