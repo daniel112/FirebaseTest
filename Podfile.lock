@@ -179,6 +179,7 @@ PODS:
     - IGListKit/Diffing
   - IGListKit/Diffing (3.4.0)
   - leveldb-library (1.20)
+  - MessageKit (1.0.0)
   - nanopb (0.3.8):
     - nanopb/decode (= 0.3.8)
     - nanopb/encode (= 0.3.8)
@@ -204,6 +205,7 @@ DEPENDENCIES:
   - Firebase
   - FirebaseUI (~> 5.0)
   - IGListKit (~> 3.0)
+  - MessageKit
   - SnapKit (~> 4.0.0)
   - SWRevealViewController (~> 2.3.0)
 
@@ -238,6 +240,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - IGListKit
     - leveldb-library
+    - MessageKit
     - nanopb
     - ObjectMapper
     - Protobuf
@@ -277,6 +280,7 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: 0c4baf0a73acd0041bf9f71ea018deedab5ea84e
   IGListKit: 7a5d788e9fb746bcd402baa8e8b24bc3bd2a5a07
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
+  MessageKit: 16160036b16476b04bd0e9f2c7ce67e662e503e4
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
@@ -286,6 +290,6 @@ SPEC CHECKSUMS:
   TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
   TwitterKit: bc7bd086b9b724a1d888745a054e1d0b1ecc4f3f
 
-PODFILE CHECKSUM: 3a813d2af9261323a024c5fdd05eb264a5b2c6d0
+PODFILE CHECKSUM: feffe018b4cbff4cac4dd85fbffb2e48d9aa9ade
 
 COCOAPODS: 1.5.3

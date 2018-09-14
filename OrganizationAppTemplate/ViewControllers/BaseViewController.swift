@@ -51,3 +51,13 @@ class BaseViewController: UIViewController {
     }
 
 }
+
+extension BaseViewController: SWRevealViewControllerDelegate {
+    func revealController(_ revealController: SWRevealViewController!, willMoveTo position: FrontViewPosition) {
+        if (position == .left) {
+            self.view.isUserInteractionEnabled = true
+        } else {
+            self.view.isUserInteractionEnabled = false
+        }
+    }
+}

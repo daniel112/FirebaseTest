@@ -16,4 +16,5 @@ target 'OrganizationAppTemplate' do
   pod 'FBSDKShareKit', '4.35'
   pod 'Alamofire', '~> 4.7'
   pod 'AlamofireObjectMapper', '~> 5.0'
+  pod 'MessageKit'
 end

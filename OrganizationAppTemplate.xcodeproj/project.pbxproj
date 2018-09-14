@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13286842213E03FF00148740 /* ChatRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13286841213E03FF00148740 /* ChatRoomViewController.swift */; };
+		13286847213E099500148740 /* LabelSubLabelSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13286846213E099500148740 /* LabelSubLabelSectionController.swift */; };
+		1328684C213E0C6D00148740 /* IGListDiffableArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1328684B213E0C6D00148740 /* IGListDiffableArray.swift */; };
+		1328684E213E0FFF00148740 /* LabelSubLabelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1328684D213E0FFF00148740 /* LabelSubLabelCollectionViewCell.swift */; };
+		13286850213E175E00148740 /* ChatRoomAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1328684F213E175E00148740 /* ChatRoomAddViewController.swift */; };
+		13286852213F69C000148740 /* NSNotificationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13286851213F69C000148740 /* NSNotificationExtensions.swift */; };
+		13286854213F8E8D00148740 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13286853213F8E8D00148740 /* ChatViewController.swift */; };
+		13286856213F917900148740 /* MockMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13286855213F917900148740 /* MockMessage.swift */; };
+		13286858213F931300148740 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13286857213F931300148740 /* Channel.swift */; };
 		1352F99A213B372800B35C9E /* AlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352F999213B372800B35C9E /* AlertViewController.swift */; };
 		1352F99D213B3DE900B35C9E /* DimPopupPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352F99C213B3DE900B35C9E /* DimPopupPresentationController.swift */; };
 		1352F9A0213B999600B35C9E /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352F99F213B999600B35C9E /* AppTheme.swift */; };
@@ -38,6 +47,15 @@
 /* Begin PBXFileReference section */
 		05B7DFACC5E6B91AD6A3BAD8 /* Pods-OrganizationAppTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrganizationAppTemplate.release.xcconfig"; path = "Pods/Target Support Files/Pods-OrganizationAppTemplate/Pods-OrganizationAppTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		0CE81C8072FBA566D9ED9480 /* Pods-OrganizationAppTemplate.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OrganizationAppTemplate.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OrganizationAppTemplate/Pods-OrganizationAppTemplate.debug.xcconfig"; sourceTree = "<group>"; };
+		13286841213E03FF00148740 /* ChatRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomViewController.swift; sourceTree = "<group>"; };
+		13286846213E099500148740 /* LabelSubLabelSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelSubLabelSectionController.swift; sourceTree = "<group>"; };
+		1328684B213E0C6D00148740 /* IGListDiffableArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGListDiffableArray.swift; sourceTree = "<group>"; };
+		1328684D213E0FFF00148740 /* LabelSubLabelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelSubLabelCollectionViewCell.swift; sourceTree = "<group>"; };
+		1328684F213E175E00148740 /* ChatRoomAddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRoomAddViewController.swift; sourceTree = "<group>"; };
+		13286851213F69C000148740 /* NSNotificationExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSNotificationExtensions.swift; sourceTree = "<group>"; };
+		13286853213F8E8D00148740 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		13286855213F917900148740 /* MockMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockMessage.swift; sourceTree = "<group>"; };
+		13286857213F931300148740 /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		1352F999213B372800B35C9E /* AlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewController.swift; sourceTree = "<group>"; };
 		1352F99C213B3DE900B35C9E /* DimPopupPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DimPopupPresentationController.swift; sourceTree = "<group>"; };
 		1352F99F213B999600B35C9E /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
@@ -81,6 +99,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13286843213E080700148740 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				13286855213F917900148740 /* MockMessage.swift */,
+				13286857213F931300148740 /* Channel.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		13286848213E099800148740 /* SectionControllers */ = {
+			isa = PBXGroup;
+			children = (
+				65A32E6F213A5E22000C7CF2 /* SideMenu */,
+				13286846213E099500148740 /* LabelSubLabelSectionController.swift */,
+			);
+			path = SectionControllers;
+			sourceTree = "<group>";
+		};
 		1352F998213B370700B35C9E /* Alert */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				1352F9A3213B9A9200B35C9E /* UIColorExtensions.swift */,
+				13286851213F69C000148740 /* NSNotificationExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -202,6 +239,9 @@
 				6545EF0B213904E2007CB6B8 /* LoginViewController.swift */,
 				65A32E61213A5796000C7CF2 /* SideMenuViewController.swift */,
 				1352F9A5213BAF3900B35C9E /* DadJokeViewController.swift */,
+				13286841213E03FF00148740 /* ChatRoomViewController.swift */,
+				1328684F213E175E00148740 /* ChatRoomAddViewController.swift */,
+				13286853213F8E8D00148740 /* ChatViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -219,8 +259,8 @@
 		65A32E63213A57F4000C7CF2 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				13286848213E099800148740 /* SectionControllers */,
 				1352F99B213B3DD700B35C9E /* Popup */,
-				65A32E6F213A5E22000C7CF2 /* SideMenu */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -229,7 +269,9 @@
 			isa = PBXGroup;
 			children = (
 				1352F9A8213BB47400B35C9E /* API */,
+				13286843213E080700148740 /* Local */,
 				65A32E66213A5A7B000C7CF2 /* SideMenu */,
+				1328684B213E0C6D00148740 /* IGListDiffableArray.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -255,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				65A32E6E213A5E1C000C7CF2 /* SideMenu */,
+				1328684D213E0FFF00148740 /* LabelSubLabelCollectionViewCell.swift */,
 			);
 			path = UICollectionViewCells;
 			sourceTree = "<group>";
@@ -436,6 +479,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+				"${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -464,6 +508,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MessageKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -491,26 +536,35 @@
 			buildActionMask = 2147483647;
 			files = (
 				65A32E60213A5613000C7CF2 /* User.swift in Sources */,
+				13286858213F931300148740 /* Channel.swift in Sources */,
 				6545EF0C213904E2007CB6B8 /* LoginViewController.swift in Sources */,
 				6545EEF62139000A007CB6B8 /* HomeViewController.swift in Sources */,
 				65A32E77213A6BF2000C7CF2 /* SideMenuItemCollectionViewCell.swift in Sources */,
 				65A32E75213A6AF7000C7CF2 /* SideMenuItemSectionController.swift in Sources */,
 				65A32E6A213A5B91000C7CF2 /* SideMenuItem.swift in Sources */,
+				1328684C213E0C6D00148740 /* IGListDiffableArray.swift in Sources */,
 				65A32E6C213A5DA8000C7CF2 /* SideMenuHeaderSectionController.swift in Sources */,
 				65A32E73213A61E6000C7CF2 /* BaseViewController.swift in Sources */,
 				1352F9AB213BB49300B35C9E /* DadJoke.swift in Sources */,
 				65A32E62213A5796000C7CF2 /* SideMenuViewController.swift in Sources */,
 				1352F9A0213B999600B35C9E /* AppTheme.swift in Sources */,
+				1328684E213E0FFF00148740 /* LabelSubLabelCollectionViewCell.swift in Sources */,
 				65A32E68213A5A91000C7CF2 /* SideMenuHeader.swift in Sources */,
 				1352F9B5213CBBE100B35C9E /* App.swift in Sources */,
 				65A32E71213A5E3F000C7CF2 /* SideMenuHeaderCollectionViewCell.swift in Sources */,
 				1352F99A213B372800B35C9E /* AlertViewController.swift in Sources */,
 				6545EEF42139000A007CB6B8 /* AppDelegate.swift in Sources */,
+				13286850213E175E00148740 /* ChatRoomAddViewController.swift in Sources */,
+				13286856213F917900148740 /* MockMessage.swift in Sources */,
 				1352F9B8213CC43000B35C9E /* UserDefaultKeys.swift in Sources */,
 				1352F9B3213C710000B35C9E /* AFBaseNetworking.swift in Sources */,
+				13286847213E099500148740 /* LabelSubLabelSectionController.swift in Sources */,
+				13286852213F69C000148740 /* NSNotificationExtensions.swift in Sources */,
+				13286842213E03FF00148740 /* ChatRoomViewController.swift in Sources */,
 				1352F99D213B3DE900B35C9E /* DimPopupPresentationController.swift in Sources */,
 				1352F9A4213B9A9200B35C9E /* UIColorExtensions.swift in Sources */,
 				1352F9A6213BAF3900B35C9E /* DadJokeViewController.swift in Sources */,
+				13286854213F8E8D00148740 /* ChatViewController.swift in Sources */,
 				1352F9B1213C6CE000B35C9E /* DadJokeAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,15 +7,19 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class HomeViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        if (!App.shared.currentUser.isLoggedIn()) {
+            self.navigationController?.present(LoginViewController(), animated: true, completion: nil)
+        }
         self.setup()
-        
-        
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        self.registerNotifications()
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,11 +29,17 @@ class HomeViewController: BaseViewController {
     
     // MARK: - Private API
     private func setup() {
-        self.view.backgroundColor = UIColor.white
+        self.title = App.shared.currentUser.displayName
 
     }
     
+    private func registerNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(notification_userLoggedIn(_:)), name: .userLoggedIn, object: nil)
+    }
     
 
+    @objc func notification_userLoggedIn(_ notification:Notification) {
+        self.title = App.shared.currentUser.displayName
+    }
 }
 

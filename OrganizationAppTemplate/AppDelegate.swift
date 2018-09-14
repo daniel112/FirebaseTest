@@ -27,21 +27,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         // Initialize the window
-        window = UIWindow.init(frame: UIScreen.main.bounds)
         UINavigationBar.appearance().barTintColor = AppTheme().mainColor()
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         UIApplication.shared.statusBarStyle = .lightContent
-        var rootVC:UIViewController?
-        if Auth.auth().currentUser != nil {
-            let navigationController:UINavigationController = UINavigationController.init(rootViewController: HomeViewController())
-            rootVC = SWRevealViewController.init(rearViewController: SideMenuViewController(), frontViewController: navigationController)
-            
-        } else {
-            rootVC = UINavigationController.init(rootViewController: LoginViewController())
-        }
         
+//        if Auth.auth().currentUser != nil {
+//            let navigationController:UINavigationController = UINavigationController.init(rootViewController: HomeViewController())
+//            rootVC = SWRevealViewController.init(rearViewController: SideMenuViewController(), frontViewController: navigationController)
+//            
+//        } else {
+//            rootVC = UINavigationController.init(rootViewController: LoginViewController())
+//        }
+        let navigationController:UINavigationController = UINavigationController.init(rootViewController: HomeViewController())
+        window = UIWindow.init(frame: UIScreen.main.bounds)
 
-        
-        window!.rootViewController = rootVC!
+        window!.rootViewController = SWRevealViewController.init(rearViewController: SideMenuViewController(), frontViewController: navigationController)
         
         window!.makeKeyAndVisible()
         

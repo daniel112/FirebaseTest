@@ -10,6 +10,7 @@ import UIKit
 import IGListKit
 import SnapKit
 import SWRevealViewController
+
 class SideMenuViewController: UIViewController, ListAdapterDataSource, SideMenuOptionSectionControllerDelegate {
 
     //MARK: variables
@@ -60,6 +61,7 @@ class SideMenuViewController: UIViewController, ListAdapterDataSource, SideMenuO
         //options
         self.sideMenuObjects.append(SideMenuItem.init(withName: "Home", image: nil)!)
         self.sideMenuObjects.append(SideMenuItem.init(withName: "Dad Jokes", image:nil)!)
+        self.sideMenuObjects.append(SideMenuItem.init(withName: "Chat Room", image:nil)!)
         self.sideMenuObjects.append(SideMenuItem.init(withName: "Logout", image:nil)!)
    
     }
@@ -93,11 +95,10 @@ class SideMenuViewController: UIViewController, ListAdapterDataSource, SideMenuO
         } else if (item.name == "Home") {
             self.revealViewController().pushFrontViewController(UINavigationController.init(rootViewController: HomeViewController()), animated: true)
         } else if (item.name == "Logout") {
-            let a = App.shared.currentUser
             App.shared.currentUser.logout()
-            // TODO: modify VC for popup
-            self.revealViewController().pushFrontViewController(UINavigationController.init(rootViewController: LoginViewController()), animated: true)
-
+            self.revealViewController().present(LoginViewController(), animated: true, completion: nil)
+        } else if (item.name == "Chat Room") {
+            self.revealViewController().pushFrontViewController(UINavigationController.init(rootViewController: ChatRoomViewController()), animated: true)
         }
         self.revealViewController().setFrontViewPosition(FrontViewPosition.left, animated: true)
     }
