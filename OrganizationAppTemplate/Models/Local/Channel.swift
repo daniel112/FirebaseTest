@@ -15,12 +15,16 @@ struct Channel {
     var members:Int = 0
     var isPrivate:Bool = false
     
-    init(withName name:String, creator:String, isPrivate:Bool) {
+    init(withID id: String , name:String, creator:String, members:Int, isPrivate:Bool) {
         self.name = name
         self.creator = creator
         self.isPrivate = isPrivate
-        self.members = 1
-        self.id = NSUUID().uuidString
+        self.members = members
+        self.id = id
+    }
+    
+    init(withName name:String, creator:String, isPrivate:Bool) {
+        self.init(withID: NSUUID().uuidString, name: name, creator: creator, members: 1, isPrivate: isPrivate)
     }
 }
 

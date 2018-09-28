@@ -26,6 +26,7 @@
 		1352F9B3213C710000B35C9E /* AFBaseNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352F9B2213C710000B35C9E /* AFBaseNetworking.swift */; };
 		1352F9B5213CBBE100B35C9E /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352F9B4213CBBE100B35C9E /* App.swift */; };
 		1352F9B8213CC43000B35C9E /* UserDefaultKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352F9B7213CC43000B35C9E /* UserDefaultKeys.swift */; };
+		136B2B54215DCE7D00D7669F /* DatabaseRepresentationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136B2B53215DCE7D00D7669F /* DatabaseRepresentationProtocol.swift */; };
 		6545EEF42139000A007CB6B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6545EEF32139000A007CB6B8 /* AppDelegate.swift */; };
 		6545EEF62139000A007CB6B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6545EEF52139000A007CB6B8 /* HomeViewController.swift */; };
 		6545EEFB2139000B007CB6B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6545EEFA2139000B007CB6B8 /* Assets.xcassets */; };
@@ -66,6 +67,7 @@
 		1352F9B2213C710000B35C9E /* AFBaseNetworking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFBaseNetworking.swift; sourceTree = "<group>"; };
 		1352F9B4213CBBE100B35C9E /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
 		1352F9B7213CC43000B35C9E /* UserDefaultKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultKeys.swift; sourceTree = "<group>"; };
+		136B2B53215DCE7D00D7669F /* DatabaseRepresentationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseRepresentationProtocol.swift; sourceTree = "<group>"; };
 		1718AADBCE0D0DCA466CDF8D /* Pods_OrganizationAppTemplate.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OrganizationAppTemplate.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6545EEF02139000A007CB6B8 /* OrganizationAppTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrganizationAppTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6545EEF32139000A007CB6B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 		13286843213E080700148740 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				136B2B52215DCE6200D7669F /* Protocols */,
 				13286855213F917900148740 /* MockMessage.swift */,
 				13286857213F931300148740 /* Channel.swift */,
 			);
@@ -186,6 +189,21 @@
 			path = Keys;
 			sourceTree = "<group>";
 		};
+		136B2B51215DCCDF00D7669F /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		136B2B52215DCE6200D7669F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				136B2B53215DCE7D00D7669F /* DatabaseRepresentationProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		6545EEE72139000A007CB6B8 = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +267,7 @@
 		65A32E5D213A55F1000C7CF2 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				136B2B51215DCCDF00D7669F /* Helpers */,
 				1352F9A2213B9A6A00B35C9E /* Extensions */,
 				1352F9A1213B99BB00B35C9E /* Common */,
 				65A32E63213A57F4000C7CF2 /* Controllers */,
@@ -544,6 +563,7 @@
 				65A32E6A213A5B91000C7CF2 /* SideMenuItem.swift in Sources */,
 				1328684C213E0C6D00148740 /* IGListDiffableArray.swift in Sources */,
 				65A32E6C213A5DA8000C7CF2 /* SideMenuHeaderSectionController.swift in Sources */,
+				136B2B54215DCE7D00D7669F /* DatabaseRepresentationProtocol.swift in Sources */,
 				65A32E73213A61E6000C7CF2 /* BaseViewController.swift in Sources */,
 				1352F9AB213BB49300B35C9E /* DadJoke.swift in Sources */,
 				65A32E62213A5796000C7CF2 /* SideMenuViewController.swift in Sources */,
@@ -703,16 +723,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OrganizationAppTemplate/OrganizationAppTemplate.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EMG5DC5D6W;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 6W2A826YQJ;
 				INFOPLIST_FILE = "$(SRCROOT)/OrganizationAppTemplate/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Yo.Daniel.OrganizationAppTemplate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielyo.OrganizationAppTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Wildcard Dev";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -724,16 +745,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = OrganizationAppTemplate/OrganizationAppTemplate.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = EMG5DC5D6W;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "$(SRCROOT)/OrganizationAppTemplate/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = Yo.Daniel.OrganizationAppTemplate;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danielyo.OrganizationAppTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

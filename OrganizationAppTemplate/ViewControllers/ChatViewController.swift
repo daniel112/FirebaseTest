@@ -18,6 +18,9 @@ class ChatViewController: MessagesViewController {
     private let user: User
     private let channel: Channel
 
+    private let db = Firestore.firestore()
+    private var reference: CollectionReference?
+
     var isTyping = false
     
     // MARK: - Initialization
@@ -42,20 +45,18 @@ class ChatViewController: MessagesViewController {
         super.viewDidLoad()
         
         self.setup()
+        self.setupFirestore()
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        // TODO: DANIEL TEST
-        let testMessage = MockMessage.init(user: user, content: "I love pizza, what is your favorite kind?")
-        insertNewMessage(testMessage)
+    }
+    
+    deinit {
+        messageListener?.remove()
     }
     
     // MARK: - Private API
     private func setup() {
-        guard let id = channel.id else {
-            navigationController?.popViewController(animated: true)
-            return
-        }
         
         maintainPositionOnKeyboardFrameChanged = true
         messageInputBar.inputTextView.tintColor = UIColor.white
@@ -66,6 +67,32 @@ class ChatViewController: MessagesViewController {
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
         
+    }
+    
+    private func setupFirestore() {
+        //  If the channel doesn’t exist, return
+        guard let id = channel.id else {
+            navigationController?.popViewController(animated: true)
+            return
+        }
+        
+        // channels/id/messages/
+        self.reference = db.collection(["channels", id, "messages"].joined(separator: "/"))
+        
+        
+        // Firestore calls this snapshot listener whenever there is a change to the database.
+        messageListener = reference?.addSnapshotListener { querySnapshot, error in
+            guard let snapshot = querySnapshot else {
+                print("Error listening for channel updates: \(error?.localizedDescription ?? "No error")")
+                return
+            }
+            
+            snapshot.documentChanges.forEach { change in
+                self.handleDocumentChange(change)
+            }
+        }
+
+
     }
     // MARK: Helpers
     
@@ -88,6 +115,33 @@ class ChatViewController: MessagesViewController {
             }
         }
     }
+    
+    private func handleDocumentChange(_ change: DocumentChange) {
+        guard let message = MockMessage(document: change.document) else {
+            return
+        }
+        
+        switch change.type {
+        case .added:
+            insertNewMessage(message)
+            
+        default:
+            break
+        }
+    }
+
+    
+    private func save(_ message: MockMessage) {
+        self.reference?.addDocument(data: message.representation) { error in
+            if let e = error {
+                print("Error sending message: \(e.localizedDescription)")
+                return
+            }
+            
+            self.messagesCollectionView.scrollToBottom()
+        }
+    }
+    
     // MARK: - Public API
     
     // MARK: - Delegates
@@ -131,10 +185,9 @@ extension ChatViewController: MessagesDataSource {
 extension ChatViewController: MessageInputBarDelegate {
     
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
-        //let message = MockMessage(user: user, content: text)
+        let message = MockMessage(user: user, content: text)
         
-        // TODO : DANIEL
-        //save(message)
+        save(message)
         inputBar.inputTextView.text = ""
     }
     
@@ -162,8 +215,7 @@ extension ChatViewController: MessagesDisplayDelegate {
     func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
         
         // TODO: DANIEL
-        return UIColor.blue
-        //return isFromCurrentSender(message: message) ? .primary : .incomingMessage
+        return isFromCurrentSender(message: message) ? UIColor.blue : UIColor.green
     }
     
     func shouldDisplayHeader(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> Bool {

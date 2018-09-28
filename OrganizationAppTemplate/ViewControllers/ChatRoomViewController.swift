@@ -58,8 +58,8 @@ class ChatRoomViewController: BaseViewController {
     
     private func createChatRoomObjects() {
         var array = [Channel]()
-        array.append(Channel.init(withName: "Room 1", creator: "Test", isPrivate: true))
-        array.append(Channel.init(withName: "Room 2", creator: "Testers", isPrivate: false))
+        array.append(Channel.init(withID: "01", name: "Room 1", creator: "Daniel", members: 1, isPrivate: false))
+        array.append(Channel.init(withID: "02", name: "Room 2", creator: "Daniel", members: 1, isPrivate: false))
 
         self.listObjects.append(IGListDiffableArray.init(withArray: array))
         self.adapter.performUpdates(animated: true, completion: nil)

@@ -9,6 +9,7 @@
 import Foundation
 import MessageKit
 import CoreLocation
+import FirebaseFirestore
 
 private struct MockLocationItem: LocationItem {
     
@@ -58,6 +59,7 @@ internal struct MockMessage: MessageType {
     
     // TEST INIT
     init(user: User, content: String) {
+        // TODO: DANIEL UPDATE SENDER
         //sender = Sender(id: user.uid, displayName: AppSettings.displayName)
         sender = Sender(id: user.token!, displayName: "TEST ACCOUNT")
         self.content = content
@@ -68,6 +70,38 @@ internal struct MockMessage: MessageType {
     
     init(text: String, sender: Sender, messageId: String, date: Date) {
         self.init(kind: MessageKind.text(text), sender: sender, content: text, messageId: messageId, date: date)
+    }
+    
+    init?(document: QueryDocumentSnapshot) {
+        let data = document.data()
+        
+        guard let sentDate = data["created"] as? Date else {
+            return nil
+        }
+        guard let senderID = data["senderID"] as? String else {
+            return nil
+        }
+        guard let senderName = data["senderName"] as? String else {
+            return nil
+        }
+        
+        id = document.documentID
+        
+        self.sentDate = sentDate
+        sender = Sender(id: senderID, displayName: senderName)
+        
+        if let content = data["content"] as? String {
+            self.content = content
+            self.kind = MessageKind.text(content)
+            //downloadURL = nil
+        } else if let urlString = data["url"] as? String, let url = URL(string: urlString) {
+            //downloadURL = url
+            content = ""
+            self.kind = MessageKind.text("")
+
+        } else {
+            return nil
+        }
     }
     
 }
@@ -82,5 +116,27 @@ extension MockMessage: Comparable {
     static func < (lhs: MockMessage, rhs: MockMessage) -> Bool {
         return lhs.sentDate < rhs.sentDate
     }
+    
+}
+
+extension MockMessage: DatabaseRepresentation {
+    var representation: [String : Any] {
+        var rep: [String : Any] = [
+            "created": sentDate,
+            "senderID": sender.id,
+            "senderName": sender.displayName
+        ]
+        
+//        if let url = downloadURL {
+//            rep["url"] = url.absoluteString
+//        } else {
+//            rep["content"] = content
+//        }
+        rep["content"] = content
+
+        
+        return rep
+    }
+    
     
 }
